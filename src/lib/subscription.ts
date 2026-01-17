@@ -67,7 +67,7 @@ export function canAccessFeature(
   feature: string
 ): boolean {
   const plan = PLANS[planType]
-  return plan.features.includes(feature)
+  return plan.features.includes(feature as any)
 }
 
 export function isSubscriptionActive(
