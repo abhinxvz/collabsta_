@@ -184,3 +184,75 @@
 .pulse-purple {
   animation: pulse-purple 2s infinite;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+  
+  /* Better touch targets */
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  /* Better spacing */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Smaller text on mobile */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Stack cards vertically */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+  }
+  
+  /* Full width buttons on mobile */
+  .mobile-full {
+    width: 100% !important;
+  }
+  
+  /* Hide sidebar on mobile by default */
+  aside {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  aside.open {
+    transform: translateX(0);
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
