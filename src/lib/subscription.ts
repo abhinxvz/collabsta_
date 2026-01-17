@@ -10,7 +10,7 @@ export const PLANS = {
       'Create unlimited services',
       'Portfolio showcase',
       'Basic analytics',
-    ],
+    ] as string[],
     followerLimit: 100000,
     trialDays: 30,
   },
@@ -26,7 +26,7 @@ export const PLANS = {
       'Advanced analytics',
       'Verified badge',
       'Priority support',
-    ],
+    ] as string[],
     followerLimit: null,
   },
   brand: {
@@ -41,9 +41,9 @@ export const PLANS = {
       'Campaign management',
       'Analytics dashboard',
       'Dedicated support',
-    ],
+    ] as string[],
   },
-} as const
+}
 
 export type PlanType = keyof typeof PLANS
 
@@ -67,7 +67,7 @@ export function canAccessFeature(
   feature: string
 ): boolean {
   const plan = PLANS[planType]
-  return plan.features.includes(feature as any)
+  return (plan.features as readonly string[]).includes(feature)
 }
 
 export function isSubscriptionActive(
