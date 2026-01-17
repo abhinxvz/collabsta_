@@ -28,6 +28,7 @@ export const PLANS = {
       'Priority support',
     ] as string[],
     followerLimit: null,
+    trialDays: 0,
   },
   brand: {
     id: 'brand',
@@ -42,6 +43,7 @@ export const PLANS = {
       'Analytics dashboard',
       'Dedicated support',
     ] as string[],
+    trialDays: 0,
   },
 }
 
